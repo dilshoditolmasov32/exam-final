@@ -40,7 +40,7 @@ const Index = () => {
               Продукты
             </h2>
             <div className="flex gap-6">
-              {products.map((item) => (
+              {products?.map((item) => (
                 <div
                   className="pt-[25px] rounded-[5px] bg-white w-[292px] relative"
                   key={item.id}
