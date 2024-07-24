@@ -1,6 +1,6 @@
 
 import Swipper from "../components/swiper"
-import { Katalog, Products, Box} from "@/components"
+import { Katalog, Products, BoxCard,Box} from "@/components"
 import { About } from "."
 const Index = () => {
   return (
@@ -10,6 +10,7 @@ const Index = () => {
     </div>
     <Katalog/>
     <Products/>
+    <BoxCard/>
     <Box/>
     <About/>
     </>
