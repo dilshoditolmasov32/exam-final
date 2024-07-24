@@ -1,39 +1,39 @@
 import { product1, product2, product3, product4, like, cart } from "@images";
 import { Button } from "@mui/material";
 import Image from "next/image";
-import Link from "next/link";
 
-const products = [
-  {
-    id: "1",
-    image: product1,
-    name: "Бутса Nike Mercurial Superfly 8 FG",
-    price: "250 000 uzs",
-  },
-  {
-    id: "2",
-    image: product2,
-    name: "Бутса Nike Mercurial Superfly 8 FG",
-    price: "250 000 uzs",
-  },
-  {
-    id: "3",
-    image: product3,
-    name: "Бутса Nike Mercurial Superfly 8 FG",
-    price: "250 000 uzs",
-  },
-  {
-    id: "4",
-    image: product4,
-    name: "Бутса Nike Mercurial Superfly 8 FG",
-    price: "250 000 uzs",
-  },
-];
+
 
 const Index = () => {
+  const products = [
+    {
+      id: "1",
+      image: product1,
+      name: "Бутса Nike Mercurial Superfly 8 FG",
+      price: "250 000 uzs",
+    },
+    {
+      id: "2",
+      image: product2,
+      name: "Бутса Nike Mercurial Superfly 8 FG",
+      price: "250 000 uzs",
+    },
+    {
+      id: "3",
+      image: product3,
+      name: "Бутса Nike Mercurial Superfly 8 FG",
+      price: "250 000 uzs",
+    },
+    {
+      id: "4",
+      image: product4,
+      name: "Бутса Nike Mercurial Superfly 8 FG",
+      price: "250 000 uzs",
+    },
+  ];
   return (
     <>
-      <div>
+      
         <div className="container">
           <div className="py-[70px]">
             <h2 className="text-[#1F1D14] text-[32px] font-Fira Sans font-bold mb-9">
@@ -69,7 +69,7 @@ const Index = () => {
               ))}
             </div>
           </div>
-          <Button
+          {/* <Button
             sx={{
               backgroundColor: "#FBD029",
               "&:hover": {
@@ -91,9 +91,9 @@ const Index = () => {
             
           >
             Yana ko'rsatish 4
-          </Button>
+          </Button> */}
         </div>
-      </div>
+      
     </>
   );
 };
