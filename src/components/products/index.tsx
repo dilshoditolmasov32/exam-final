@@ -3,34 +3,34 @@ import { Button } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 
-const Index = () => {
-  const products = [
-    {
-      id: "1",
-      image: product1,
-      name: "Бутса Nike Mercurial Superfly 8 FG",
-      price: "250 000 uzs",
-    },
-    {
-      id: "2",
-      image: product2,
-      name: "Бутса Nike Mercurial Superfly 8 FG",
-      price: "250 000 uzs",
-    },
-    {
-      id: "3",
-      image: product3,
-      name: "Бутса Nike Mercurial Superfly 8 FG",
-      price: "250 000 uzs",
-    },
-    {
-      id: "4",
-      image: product4,
-      name: "Бутса Nike Mercurial Superfly 8 FG",
-      price: "250 000 uzs",
-    },
-  ];
+const products = [
+  {
+    id: "1",
+    image: product1,
+    name: "Бутса Nike Mercurial Superfly 8 FG",
+    price: "250 000 uzs",
+  },
+  {
+    id: "2",
+    image: product2,
+    name: "Бутса Nike Mercurial Superfly 8 FG",
+    price: "250 000 uzs",
+  },
+  {
+    id: "3",
+    image: product3,
+    name: "Бутса Nike Mercurial Superfly 8 FG",
+    price: "250 000 uzs",
+  },
+  {
+    id: "4",
+    image: product4,
+    name: "Бутса Nike Mercurial Superfly 8 FG",
+    price: "250 000 uzs",
+  },
+];
 
+const Index = () => {
   return (
     <>
       <div>
@@ -40,17 +40,15 @@ const Index = () => {
               Продукты
             </h2>
             <div className="flex gap-6">
-              {products?.map((item) => (
+              {products?.map((item, index) => (
                 <div
                   className="pt-[25px] rounded-[5px] bg-white w-[292px] relative"
-                  key={item.id}
+                  key={index}
                 >
                   <div className="absolute top-[10px] right-[14px]">
-                    <Link href={"like"}>
-                     
-                        <Image src={like} alt="like" />
-                   
-                    </Link>
+                    <button>
+                      <Image src={like} alt="like" />
+                    </button>
                   </div>
                   <Image
                     src={item.image}
@@ -85,8 +83,12 @@ const Index = () => {
               color: "#1F1D14",
               fontWeight: 600,
               fontSize: "24px",
+              display:"flex",
+              alignItems:"center",
+              gap:"10px",
+              fontFamily:"Fira Sans",
             }}
-            className="flex items-center gap-[10px] text-[20px] font-Fira Sans"
+            
           >
             Yana ko'rsatish 4
           </Button>
