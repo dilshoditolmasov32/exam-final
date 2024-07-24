@@ -66,7 +66,10 @@ const Index = () => {
             ))}
           </div>
         </div>
-        <button className="bg-[#FBD029] rounded-[5px] w-full font-Fira Sans font-semibold flex gap-[10px] items-center justify-center text-[24px] mb-10 py-[15px]">
+        <button
+          className="bg-[#FBD029] rounded-md w-full font-fira-sans font-semibold flex gap-2.5 items-center justify-center text-lg mb-10 py-3.5"
+          aria-label="Yana ko'rsatish 4"
+        >
           Yana ko'rsatish 4
         </button>
       </div>
