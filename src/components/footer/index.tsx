@@ -15,8 +15,8 @@ const Index = () => {
       <div className="bg-[#FBD029] h-6 w-full"></div>
       <div className="bg-[#1F1D14] pt-[72px] pb-11">
         <div className="container">
-          <div className="flex justify-between">
-            <div>
+          <div className="flex justify-between gap-6 max-lg:flex max-lg:flex-wrap max-lg:px-5 max-md:flex max-md:px-5">
+            <div className="max-xs:mb-4">
               <Link href={"#"}>
                 <Image src={logo} alt="sport-logo" />
               </Link>
@@ -39,9 +39,9 @@ const Index = () => {
                 <Image src={email} alt="email icon" />
                 <Link
                   href="mailto: dilshoditolmasov32@gmail.com"
-                  className="font-Fira Sans text-white  text-[16px]"
+                  className="font-Fira Sans text-white  text-[16px] max-w-[18px]"
                 >
-                  dilshoditolmasov32@gmail.com
+                 support@figma.com
                 </Link>
               </p>
             </div>
@@ -70,18 +70,18 @@ const Index = () => {
                   type="email"
                   required
                   placeholder="support@figma.com"
-                  className="py-[10px] px-4 font-Fira Sans text-[12px] text-[#9A9EA5] leading-3 rounded-[5px] border-[1px] border-[#9A9EA5] outline-none "
+                  className="py-[10px] px-4 font-Fira Sans text-[12px] text-[#9A9EA5] leading-3 rounded-[5px] border-[1px] border-[#9A9EA5] outline-none max-xs:w-full "
                 />
                 <button
                   type="submit"
-                  className="bg-[#FBD029] text-[#1F1D14]  px-10 font-Fira Sans text-[16px] rounded-[6px]   lg:left-[-40px] xs:w-full  xs:flex xs:justify-center py-[10px] xs:mt-5 xs:px-6"
+                  className="bg-[#FBD029] text-[#1F1D14]  px-10 font-Fira Sans text-[16px] rounded-[6px]   lg:left-[-40px] xs:w-full  xs:flex xs:justify-center py-[10px] xs:mt-5 xs:px-6  max-xs:w-full max-xs:mt-5"
                 >
                   Отправить
                 </button>
               </form>
 
               <div className="flex gap-5 mt-10">
-                <p className="flex items-center gap-[5px] mb-6">
+                <p className="flex items-center gap-[5px] mb-6 max-xs:flex max-xs:justify-center">
                   <Link href="https://www.instagram.com/dilshodbek_zafarivich">
                     <Image src={instagram} alt="instagram icon" />
                   </Link>
@@ -107,11 +107,11 @@ const Index = () => {
 
     
       <div className="container"> 
-      <div className="flex justify-between items-center pt-[13px] pb-[22px] ">
+      <div className="flex flex-wrap justify-between items-center pt-[13px] pb-[22px] max-md:gap-5 max-md:justify-center">
         <div>
           <p className="text-[#7B7E86]">© 2022 All Rights Reserved</p>
         </div>
-        <div className="flex gap-10 text-[#7B7E86]">
+        <div className="flex gap-10 text-[#7B7E86] max-xs:flex max-xs:flex-wrap">
           <p className="">Privacy Policy</p>
           <p>Terms of Use</p>
           <p>Sales and Refunds</p>

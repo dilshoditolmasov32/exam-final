@@ -5,7 +5,6 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-// import "./swiper.css";
 
 import { nextIcon, puma, icon2, nike, adidas, reebok } from "@images";
 import { Button } from "@mui/material";
@@ -52,7 +51,7 @@ const Index = () => {
           </h2>
           <div className="pt-[70px] pl-20 pr-[100px] pb-10 bg-[#1F1D14] rounded-[8px]">
             <p className="max-w-[718px] text-white text-[20px] font-Fira Sans opacity-80">
-              Интернет магазин спортивных товаров{" "}
+              Интернет магазин спортивных товаров
               <span className="font-bold leading-7 text-[20px] underline">
                 7MARKETSPORT.UZ
               </span>{" "}
@@ -73,8 +72,8 @@ const Index = () => {
 
           <div className="flex  flex-wrap gap-[30px] justify-between items-center my-20 bg-white rounded-[8px] py-10 px-12">
             <Swiper
-              slidesPerView={4}
-              spaceBetween={30}
+              slidesPerView={5}
+              spaceBetween={20}
               centeredSlides={true}
               autoplay={{
                 delay: 1000,

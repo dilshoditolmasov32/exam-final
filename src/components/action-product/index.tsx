@@ -1,7 +1,5 @@
-import { product1, product2, product3, product4, like, cart } from "@images";
-import { Button } from "@mui/material";
+import { product1, product2, product3, product4, like, cart, action } from "@images";
 import Image from "next/image";
-import { title } from "process";
 
 const Index = () => {
   const products = [
@@ -33,32 +31,34 @@ const Index = () => {
   return (
     <>
       <div className="container">
-        <div className="py-[70px] max-lg:py-[60px] max-md:py-[50px] max-sm:py-[40px] max-xs:py-[30px]">
+        <div className="py-[70px]">
           <h2 className="text-[#1F1D14] text-[32px] font-Fira Sans font-bold mb-9">
-            Продукты
+          Акция
           </h2>
-          <div className="flex gap-6 max-lg:grid max-lg:grid-cols-3 max-md:grid max-md:grid-cols-2 max-md:justify-items-center   max-xs:grid  max-xs:grid-cols-1 max-xs:justify-items-center">
+          <div className="flex gap-6 max-lg:grid max-lg:grid-cols-3  max-md:grid max-md:grid-cols-2 max-md:justify-items-center max-xs:grid max-xs:grid-cols-1">
             {products?.map((item, index) => (
               <div
-                className="pt-[25px] rounded-[5px] bg-white w-[292px] relative max-lg:max-w-[290px] max-lg:w-full max-xs:max-w-[420px] max-xs:w-full "
+                className="pt-[25px] rounded-[5px] bg-white w-[292px] relative max-lg:max-w-[280px] max-lg:w-full max-md:max-w-[290px]  max-xs:max-w-[440px] max-xs:w-full "
                 key={index}
               >
+                  
                 <div className="absolute top-[10px] right-[14px]">
                   <button>
-                    <Image src={like} alt="like" className="max-xs:w-[40px]" />
+                    <Image src={like} alt="like" />
                   </button>
                 </div>
-              <div className="max-sm:flex max-sm:justify-center">
-              <Image
+                <div className="absolute top-[0] left-[0px]">
+                <Image src={action} alt="action" />
+                </div>
+                <Image
                   src={item.image}
                   alt="product_image"
-                  className="pl-[30px] pr-5 max-xs:w-[220px]"
+                  className="pl-[30px] pr-5"
                 />
-              </div>
-                <p className="pl-[30px] pr-5 mb-6 mt-5 text-[20px] max-sm:p-4 max-sm:mb-4">
+                <p className="pl-[30px] pr-5 mb-6 mt-5 text-[20px]">
                   {item.name}
                 </p>
-                <div className="pl-[30px] pr-5 mb-[25px] text-[20px] font-semibold max-sm:mb-4">
+                <div className="pl-[30px] pr-5 mb-[25px] text-[20px] font-semibold">
                   {item.price}
                 </div>
                 <button className="bg-[#FBD029] w-full flex items-center justify-center gap-[6px] py-[15px] font-Fira Sans text-[20px] text-[#1F1D14] rounded-br-[5px] rounded-bl-[5px]">
@@ -68,11 +68,8 @@ const Index = () => {
               </div>
             ))}
           </div>
-          <button className="w-full py-[15px] mt-[50px] px-10 bg-white rounded-[5px] text-[20px] hover:bg-[#FBD029] hover:text-[#1F1D14] transition-all duration-300 ease-linear hover:scale-105  ">
-          Показать ещё 4
-        </button>
         </div>
-       
+      
       </div>
     </>
   );

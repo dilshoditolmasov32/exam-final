@@ -35,5 +35,13 @@ import check from './check.svg'
 import aksiya from './aksiya.svg'
 import check2 from './tovar_check.svg'
 import sport_img from './sport-img.svg'
+import eye from './eye.svg'
+import calendar from './calender.svg'
+import action from "./action.svg"
+import board from "./board.svg"
+import list from "./list.svg"
+import search from "./search.svg"
+import menu from "./menu.svg"
 
-export {logo, phone_icon, email, cart, user, like, katalog, lokatsiya, telegram, instagram, facebook, swapper1, swapper2, swapper3, swapper4, swapper5, card1,card2,card3, card4, card5,card6, product1, product2,product3,product4, nextIcon, puma,nike, adidas, reebok, icon2, taksi,check,check2, aksiya, sport_img}
+
+export {logo, phone_icon, email, cart, user, like, katalog, lokatsiya, telegram, instagram, facebook, swapper1, swapper2, swapper3, swapper4, swapper5, card1,card2,card3, card4, card5,card6, product1, product2,product3,product4, nextIcon, puma,nike, adidas, reebok, icon2, taksi,check,check2, aksiya, sport_img, eye, calendar, action, board, list, search, menu}
