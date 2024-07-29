@@ -1,6 +1,7 @@
 import { eye, calendar } from "@images";
 import Image from "next/image";
 import { ActionProduct } from "@/components";
+
 const Index = () => {
   const data = [
     {
@@ -36,6 +37,7 @@ const Index = () => {
       text: "Эллиптические тренажёры популярны среди людей любого возраста и с разным уровнем физической подготовкb Эллиптические тренажёры популярны среди людей любого возраста и с разным уровнем физической подготовки...",
     },
   ];
+
   return (
     <>
       <div className="container ">

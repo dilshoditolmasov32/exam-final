@@ -99,7 +99,7 @@ const Index = () => {
   const [value, setValue] = useState<number[]>([10, 40]);
 
   const handleChange = (event: Event, newValue: number | number[]) => {
-    console.log(newValue)
+    console.log(newValue);
     setValue(newValue as number[]);
   };
 
