@@ -35,6 +35,7 @@ export default function Swipper() {
           prevEl: '.swiper-button-prev',
         }}
         modules={[Autoplay, Pagination, Navigation]}
+        loop={true}
       >
         {images.map((item) => (
           <SwiperSlide key={item.id} className="rounded-[20px] max-sm:h-[200px]">

@@ -35,12 +35,13 @@ export default function Index() {
           className=" w-full"
         >
           {katalog?.map((element, index) => (
-            <SwiperSlide key={index} className="mb-[46px]">
-              <div className="xl:grid xl:grid-cols-6 gap-6 sm:grid sm:grid-cols-3 md:grid md:grid-cols-4 lg:grid lg:grid-cols-5">
+            <SwiperSlide key={index} className="mb-[46px] mt-[30px]">
+                <div className="xl:grid xl:grid-cols-6 gap-6 max-sm:grid max-sm:grid-cols-2  
+                max-md:justify-items-center sm:grid sm:grid-cols-3 md:grid md:grid-cols-3 md:justify-items-center lg:grid lg:grid-cols-5">
                 {katalog?.map((item) => (
                   <div
                     key={item.id}
-                    className=" pt-5 pb-9 px-5 rounded-[8px] w-[187px]"
+                    className=" pt-5 pb-9 px-5 rounded-[8px] w-[187px] max-xs:w-[160px]"
                     style={{ backgroundColor: item.bgColor }}
                   >
                     <Link href={"#"}>

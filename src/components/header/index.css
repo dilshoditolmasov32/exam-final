@@ -28,3 +28,18 @@
         }
     }
   
+    @media (max-width:1080px) {
+        .search_input{
+          max-width: 450px;
+          width: 100%;
+          
+        }
+    }
+    @media (max-width:830px) {
+        .search_input{
+          max-width: 350px;
+          width: 100%;
+          
+        }
+    }
+  

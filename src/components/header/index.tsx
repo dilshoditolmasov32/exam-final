@@ -2,17 +2,29 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import './index.css';
-import { logo, phone_icon, email, katalog, user, like, cart, search, menu } from "@images";
+import "./index.css";
+import {
+  logo,
+  phone_icon,
+  email,
+  katalog,
+  user,
+  like,
+  cart,
+  search,
+  menu,
+} from "@images";
 import Image from "next/image";
+import { Button } from "@mui/material";
+import SigInModal from "../../app/login/page";
 
 const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   const links = [
     {
       title: "Продукты",
-      url: "/product",
+      url: "/products",
     },
     {
       title: "Контакты",
@@ -32,6 +44,9 @@ const Index = () => {
     },
   ];
 
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+
   return (
     <>
       <div className="bg-[#1F1D14]">
@@ -43,7 +58,7 @@ const Index = () => {
                   <Image src={logo} alt="sport-logo" />
                 </Link>
               </li>
-              <div className="hidden lg:flex items-center gap-[30px]" >
+              <div className="hidden lg:flex items-center gap-[30px]">
                 {links?.map((item, index) => (
                   <li
                     key={index}
@@ -56,31 +71,50 @@ const Index = () => {
               </div>
             </ul>
             <div className="hidden lg:flex items-center gap-[30px]">
-              <p className="flex items-center gap-[5px] relative "  id="navbar_link">
+              <p
+                className="flex items-center gap-[5px] relative "
+                id="navbar_link"
+              >
                 <Image src={phone_icon} alt="phone icon" />
                 <Link
                   href="tel:+998905711442"
                   className="font-Fira Sans text-white text-[16px] "
-                 
                 >
                   +998 90 571 14 42
                 </Link>
               </p>
-              <p className="flex items-center gap-[5px] relative"  id="navbar_link">
+              <p
+                className="flex items-center gap-[5px] relative"
+                id="navbar_link"
+              >
                 <Image src={email} alt="email icon" />
                 <Link
                   href="mailto:dilshoditolmasov32@gmail.com"
                   className="font-Fira Sans text-white text-[16px] "
-                 
                 >
-                  dilshoditolmasov32@gmail.com
+                  info@gmail.com
                 </Link>
               </p>
             </div>
             <div className="lg:hidden">
-              <button onClick={() => setIsOpen(!isOpen)} className="text-white" aria-label="Open Menu">
-                <svg className="h-9 w-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-white"
+                aria-label="Open Menu"
+              >
+                <svg
+                  className="h-9 w-9"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  ></path>
                 </svg>
               </button>
             </div>
@@ -88,14 +122,24 @@ const Index = () => {
           {isOpen && (
             <div className="lg:hidden flex flex-col items-center space-y-4 bg-[#1F1D14] py-4">
               {links?.map((item, index) => (
-                <Link key={index} href={`${item.url}`} className="font-Fira Sans text-white text-[18px] my-4">
+                <Link
+                  key={index}
+                  href={`${item.url}`}
+                  className="font-Fira Sans text-white text-[18px] my-4"
+                >
                   {item.title}
                 </Link>
               ))}
-              <Link href="tel:+998905711442" className="font-Fira Sans text-white text-[18px] my-4">
+              <Link
+                href="tel:+998905711442"
+                className="font-Fira Sans text-white text-[18px] my-4"
+              >
                 +998 90 571 14 42
               </Link>
-              <Link href="mailto:dilshoditolmasov32@gmail.com" className="font-Fira Sans my-4 text-white text-[18px] pb-4">
+              <Link
+                href="mailto:dilshoditolmasov32@gmail.com"
+                className="font-Fira Sans my-4 text-white text-[18px] pb-4"
+              >
                 dilshoditolmasov32@gmail.com
               </Link>
             </div>
@@ -103,10 +147,10 @@ const Index = () => {
         </div>
       </div>
 
-      {/* <div className="bg-[#fff]">
+      <div className="bg-[#fff]">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-between py-4">
-            <div className="flex items-center gap-[10px] mb-4 md:mb-0">
+          <div className="flex justify-between py-4 gap-5 max-md:flex max-md:flex-wrap">
+            <div className="flex items-center gap-[10px] mb-4 md:mb-0  max-md:w-full max-md:flex max-md:justify-between">
               <Button
                 variant="contained"
                 sx={{
@@ -117,38 +161,56 @@ const Index = () => {
                   borderRadius: "5px",
                   paddingX: "40px",
                   paddingY: "11px ",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  fontFamily: "Fira Sans",
+                  fontSize: "20px",
                 }}
-                className="flex items-center gap-[10px] text-[20px] font-Fira Sans"
               >
-                <Image src={katalog} alt="katalog" />
+                <Image src={katalog} alt="katalog" className="max-xs:hidden" />
                 Каталог
               </Button>
-              <div className="flex items-center w-full md:w-[502px] bg-[#F2F2F2] px-5 rounded-[5px]">
+              <div className=" search_input flex items-center lg:w-[500px]  bg-[#F2F2F2] px-5 rounded-[5px]  max-md:w-full">
                 <input
                   type="text"
-                  className="py-[17px] bg-[#F2F2F2] rounded-[5px] outline-none border-[#F2F2F2] opacity-80 font-Fira Sans text-[16px] flex-grow"
+                  className="  py-[17px] bg-[#F2F2F2] rounded-[5px] outline-none border-[#F2F2F2] opacity-80 font-Fira Sans text-[16px] flex-grow"
                   placeholder="Поиск"
                 />
                 <p>
-                  <Image src={search} alt="search_icon" />
+                  <Image
+                    src={search}
+                    alt="search_icon"
+                    className="max-xs:hidden"
+                  />
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-[10px]">
-              <button className="flex items-center py-[13px] px-[13px] bg-[#F2F2F2] rounded-[5px]">
-                <Image src={user} alt="user" />
-              </button>
-              <button className="flex items-center py-[13px] px-[13px] bg-[#F2F2F2] rounded-[5px] text-[#1F1D14] ml-[13px] mr-[25px]">
-                <Image src={like} alt="like" />
-              </button>
-              <button className="flex items-center gap-[5px] text-[20px] font-Fira Sans py-[12px] px-[30px] bg-[#F2F2F2] rounded-[5px] text-[#1F1D14]">
-                <Image src={cart} alt="cart" />
-                Корзина
-              </button>
+            <div className="flex items-center gap-[10px] max-md:w-full max-md:flex max-md:gap-5 max-xs:flex max-xs:justify-between ">
+              <Link href={"login"}>
+                <button
+                  className="flex items-center py-[13px] px-[13px] bg-[#F2F2F2] hover:bg-[#FBD029] transition-all  duration-300 active:bg-[#FBD029] rounded-[5px]"
+                  onClick={handleOpen}
+                >
+                  <Image src={user} alt="user" />
+                </button>
+              </Link>
+              <Link href={"wishlist"}>
+                <button className="flex items-center py-[13px] px-[13px] bg-[#F2F2F2] hover:bg-[#FBD029] transition-all  duration-300 active:bg-[#FBD029] rounded-[5px] text-[#1F1D14] ml-[13px] mr-[25px]">
+                  <Image src={like} alt="like" />
+                </button>
+              </Link>
+              <Link href={"basket"}>
+                <button className="flex items-center gap-[5px] text-[20px] font-Fira Sans py-[12px] px-[30px] bg-[#F2F2F2] hover:bg-[#FBD029] transition-all  duration-300 active:bg-[#FBD029] rounded-[5px] text-[#1F1D14]">
+                  <Image src={cart} alt="cart" />
+                  Корзина
+                </button>
+              </Link>
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
+      <SigInModal open={open} setOpen={setOpen} />
     </>
   );
 };

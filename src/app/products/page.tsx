@@ -287,7 +287,7 @@ const Index = () => {
                   </div>
                 ))}
               </div>
-              <button className="w-full py-[15px] mt-[50px] px-10 bg-white rounded-[5px] text-[20px] hover:bg-[#FBD029] hover:text-[#1F1D14] transition-all duration-300 ease-linear hover:scale-105  ">
+              <button className="w-full py-[15px] mt-[50px] px-10 bg-white rounded-[5px] text-[20px] hover:bg-[#FBD029] hover:text-[#1F1D14] transition-all duration-500 ease-linear  ">
                 Показать ещё
               </button>
             </div>

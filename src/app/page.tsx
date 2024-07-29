@@ -2,6 +2,7 @@
 import Swipper from "../components/swiper"
 import { Katalog, Products, BoxCard,Box} from "@/components"
 import About from './about/page'
+
 const Index = () => {
   return (
     <>
@@ -11,8 +12,8 @@ const Index = () => {
     <Katalog/>
     <Products/>
     <BoxCard/>
-    {/* <Box/> */}
-    {/* <About/> */}
+    <Box/>
+    <About/>
     </>
   )
 }
