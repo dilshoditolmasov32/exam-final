@@ -18,14 +18,12 @@ const style = {
   p: 4,
 };
 
-interface SigInProps {
-  open: boolean;
-  setOpen: (open: boolean) => void;
-}
-
-export default function Index({open, setOpen}:SigInProps) {
 
 
+export default function Index() {
+
+  const [open, setOpen] =useState(false);
+  const handleOpen = () => setOpen(true);
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -37,6 +35,7 @@ export default function Index({open, setOpen}:SigInProps) {
   };
   return (
     <div>
+      <button onClick={handleOpen}>Button</button>
       <Modal
         open={open}
         onClose={ () => setOpen(false)}
