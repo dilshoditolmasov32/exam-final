@@ -19,12 +19,13 @@ const style = {
   p: 4,
   borderRadius: 1,
 };
+
+const defaultTheme = createTheme();
+
 interface SigInProps {
   open: boolean;
   setOpen: (open: boolean) => void;
 }
-
-const defaultTheme = createTheme();
 
 export default function SignIn({ open, setOpen }: SigInProps) {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -37,17 +38,12 @@ export default function SignIn({ open, setOpen }: SigInProps) {
   };
 
   return (
-    <Modal
-      open={open}
-      onClose={() => setOpen(false)}
-    
-    >
+    <Modal open={open} onClose={() => setOpen(false)}>
       <Box sx={style}>
         <ThemeProvider theme={defaultTheme}>
           <Container component="main" maxWidth="xs">
             <CssBaseline />
-
-            <Typography component="h1" variant="h5" sx={{textAlign:"center"}}>
+            <Typography component="h1" variant="h5" sx={{ textAlign: "center" }}>
               Sign in
             </Typography>
             <Box
@@ -76,7 +72,6 @@ export default function SignIn({ open, setOpen }: SigInProps) {
                 id="password"
                 autoComplete="current-password"
               />
-
               <Button
                 type="submit"
                 fullWidth
