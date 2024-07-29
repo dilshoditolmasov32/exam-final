@@ -210,7 +210,7 @@ const Index = () => {
           </div>
         </div>
       </div>
-      <SigInModal  />
+      <SigInModal  open={open} setOpen={setOpen}/>
     </>
   );
 };
