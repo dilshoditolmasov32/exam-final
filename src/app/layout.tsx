@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Footer, Header } from "@/components";
-import Login from './sign-in/page'
 
 
 export const metadata: Metadata = {
@@ -25,7 +24,6 @@ export default function RootLayout({
 
         <footer>
 
-          <Login />
           <Footer />
         </footer>
       </body>

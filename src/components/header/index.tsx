@@ -16,7 +16,7 @@ import {
 } from "@images";
 import Image from "next/image";
 import { Button } from "@mui/material";
-// import SigInModal from "../../app/login/page";
+import SigInModal from "../../app/sign-in/page";
 
 const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -187,14 +187,14 @@ const Index = () => {
               </div>
             </div>
             <div className="flex items-center gap-[10px] max-md:w-full max-md:flex max-md:gap-5 max-xs:flex max-xs:justify-between ">
-              <Link href={"login"}>
+    
                 <button
                   className="flex items-center py-[13px] px-[13px] bg-[#F2F2F2] hover:bg-[#FBD029] transition-all  duration-300 active:bg-[#FBD029] rounded-[5px]"
                   onClick={handleOpen}
                 >
                   <Image src={user} alt="user" />
                 </button>
-              </Link>
+              
               <Link href={"wishlist"}>
                 <button className="flex items-center py-[13px] px-[13px] bg-[#F2F2F2] hover:bg-[#FBD029] transition-all  duration-300 active:bg-[#FBD029] rounded-[5px] text-[#1F1D14] ml-[13px] mr-[25px]">
                   <Image src={like} alt="like" />
@@ -210,7 +210,7 @@ const Index = () => {
           </div>
         </div>
       </div>
-      {/* <SigInModal  open={open} setOpen={setOpen}/> */}
+      <SigInModal  open={open} setOpen={setOpen}/>
     </>
   );
 };

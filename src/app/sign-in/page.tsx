@@ -18,10 +18,13 @@ const style = {
   p: 4,
 };
 
-export default function Index() {
-  const [open, setOpen] =useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+interface SigInProps {
+  open: boolean;
+  setOpen: (open: boolean) => void;
+}
+
+export default function Index({open, setOpen}:SigInProps) {
+
 
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -34,10 +37,9 @@ export default function Index() {
   };
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
       <Modal
         open={open}
-        onClose={handleClose}
+        onClose={ () => setOpen(false)}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
