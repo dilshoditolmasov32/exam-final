@@ -16,7 +16,7 @@ import {
 } from "@images";
 import Image from "next/image";
 import { Button } from "@mui/material";
-import SigInModal from "../../app/login/page";
+// import SigInModal from "../../app/login/page";
 
 const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -210,7 +210,7 @@ const Index = () => {
           </div>
         </div>
       </div>
-      <SigInModal  open={open} setOpen={setOpen}/>
+      {/* <SigInModal  open={open} setOpen={setOpen}/> */}
     </>
   );
 };
